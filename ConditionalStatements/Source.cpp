@@ -30,7 +30,7 @@ int main()
 	//FizzBuzz Multiples
 	{
 		int input = 0;
-		std::cout << "Enter a number:\n";
+		std::cout << "Fizzbuzz -- Enter a number:\n";
 		std::cin >> input;
 
 		if (input % 3 == 0 && input % 5 == 0)
@@ -96,13 +96,12 @@ int main()
 			std::cout << "You are dead.\n";
 		}
 
-		system("pause");
 	}
 
 	// HOMEWORK 22AUGUST
 
 	// 1 
-	{
+	/*{
 		int x, y;
 		std::cin >> x, y;
 
@@ -110,7 +109,7 @@ int main()
 		{
 			x = 100;
 		}
-	}
+	}*/
 
 	// 2
 	{
@@ -177,19 +176,115 @@ int main()
 		std::cout << "Enter two numbers: \n";
 		std::cin >> x >> y;
 
-		int y = (x == 0) ? 0 : (10 / x);
+		y = (x == 0) ? 0 : (10 / x);
 	}
 
 	// 6 Calculator
 
 	// 7 Month
+	{
+		int month;
+
+		std::cout << "Enter a number for the month (1-12)";
+		std::cin >> month;
+
+		switch (month)
+		{
+		case 1:
+			std::cout << "January has 31 days";
+			break;
+		case 2:
+			std::cout << "February has 28 days, or 29 in a leap year";
+			break;
+		case 3:
+			std::cout << "March has 31 days";
+			break;
+		case 4:
+			std::cout << "April has 30 days";
+			break;
+		case 5:
+			std::cout << "May has 31 days";
+			break;
+		case 6:
+			std::cout << "June has 30 days";
+			break;
+		case 7:
+			std::cout << "July has 31 days";
+			break;
+		case 8:
+			std::cout << "August has 31 days";
+			break;
+		case 9:
+			std::cout << "September has 30 days";
+			break;
+		case 10:
+			std::cout << "October has 31 days";
+			break;
+		case 11:
+			std::cout << "November has 30 days";
+			break;
+		case 12:
+			std::cout << "December has 31 days";
+			break;
+		default:
+			std::cout << "That is not a valid month";
+				break;
+		}
+
+	}
 
 	// 8 Declarations
+	/*
+	bool flag = true;
+	int numPos = 35, numNeg = -55;
+	char frstChar = 'J', scndChar = 'O';
+	double frstPrice = 5.60;
+	
+	a. numPos > numNeg	-- True
+	b. frstChar > scndChar -- False
+	c. !(numPos + numNeg)  -- False
+	d. (numPos == -30) || (numNeg == -55)  -- True
+	e. (frstPrice >= 4.1) && (frstPrice <= 9.9)  -- True
+	f. !flag &&(scndChar <= ‘R’)  -- False
+	g. (numPos < 66) || (flag && numPos > 35) -- True
+	h. ++numPos == 36  -- True
+	i. numPos++ == 36  -- False
+	j. (frstChar == ‘j’) || (frstChar == ‘J’)  -- True
+	*/
 
 	// 9 Evaluate
-	// testing
+	/*
+	a. (a || b) || (a && b)
+			1		0
+				1
+	b. !((!a) && (a)) || (a && b)
+		!((0) && (1))		0
+		!(0)				0
+		1					0
+					1
+	c. !((5 || a) || (!b)) && (!(a) && b)
+		!((1) || (1)) && (0 && 0)
+		0			&&      0
+					0
+	d. a || b && a
+	   1 || 0
+	      1
+
+	e. !a&&b
+		0
+	
+	a) True  b) True  c) False  d) True  e) False
+	*/
+/*
+	{
+	
+		for (int countToTen = 1; countToTen < 11; countToTen++)
+		{
+			std::cout << countToTen;
+		}
 
 
+	}*/
 
 
 
