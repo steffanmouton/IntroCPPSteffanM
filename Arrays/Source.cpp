@@ -80,7 +80,91 @@ int main()
 		}
 	}
 
+	//Homework 1
+	/*a) Valid
+	b) Invalid - Out of Bounds
+	c) Invalid - Improper syntax "("
+	d) Valid
+	e) Valid
+	f) Invalid - Space in memory not declared
+	g) Invalid - Cant have negative amount of space in memory
+	h) Invalid - Syntax, no brackets*/
+
+	//Homework 2
+	/*a) 10
+	b) 6
+	c) 6
+	d) 14
+	e) Invalid Out of Bounds*/
+
+	//Homework 3 Write a for loop to initialize the following array (int data[10]) with the values 10, 9, 8… (Etc)
+	{
+		int data[10];
+		int count = 0;
+
+		for (int i = 10; i > 0; i--)
+		{
+			data[count++] = i;
+		}
+	}
+
+	//Homework 4 Create a program that asks for 5 numbers from the user, and store them in an array. Print
+	//out the numbers in reverse order.
+	{
+		int data[5];
+		int a, b, c, d, e;
+
+		std::cout << "Please input 5 numbers:\n";
+		std::cin >> a >> b >> c >> d >> e;
+
+		data[0] = a;
+		data[1] = b;
+		data[2] = c;
+		data[3] = d;
+		data[4] = e;
+
+		for (int i = 4; i >= 0; i--)
+		{
+			std::cout << data[i] << " ";
+		}
+
+		std::cout << std::endl;
+	}
+
+	//Homework 5 Write a program that lets the user enter 10 values into an array. The program should then
+	//display the largest and smallest values stored in the array.
+
+	{
+		int data[10];
+
+		for (int i = 0; i < 10; i++)
+		{
+			std::cin >> data[i];
+		}
+		int largest = data[0];
+		int smallest = data[0];
+		for (int i = 0; i < 10; i++)
+		{
+			if (data[i] > largest)
+			{
+				largest = data[i];
+			}
+			else if (data[i] < smallest)
+			{
+				smallest = data[i];
+			}
+
+			//if value is larger than largetst
+			//	largetst = value
+			//if smaller than smallest
+			//	smallest = value;
+		}
+
+		std::cout << "Smallest: " << smallest << std::endl;
+		std::cout << "Largest: " << largest << std::endl;
+	}
 
 
 
+	system("pause");
 }
