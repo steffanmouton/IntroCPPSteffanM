@@ -266,7 +266,7 @@ int main()
 				sum = sum + i;
 			}
 
-			if (i = 1000)
+			if (i == 1000)
 			{
 				std::cout << "\nThe sum of all multiples of 3 and 5 from 0 to 1000 is " << sum << ". \n";
 				break;
