@@ -13,7 +13,7 @@ int main()
 		char input;
 		
 
-		std::cout << "Is your number '>', '<', or '=' to " << guess << "?\n";
+		std::cout << "Is your number '>', '<', or '=' to " << guess << "?\n Input 'E' at any time to exit. \n";
 		std::cin >> input;
 
 		switch (input)
@@ -27,6 +27,8 @@ int main()
 		case '=':
 			std::cout << "The number you chose was " << guess << ".\n";
 			system("pause");
+			return 0;
+		case 'E':
 			return 0;
 		}
 
