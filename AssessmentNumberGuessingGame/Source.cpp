@@ -1,34 +1,42 @@
 #include <iostream>
+#include <time.h>
 
 int main()
 {
-	int guess = 10;
-	char start = ' ';
+	srand(time(NULL));
+	int guess = 0;
+	char input = ' ';
 
-	std::cout << "Think of a number between 1 and 20\n Type 'S' when ready to start.\n";
-	std::cin >> start;
+	std::cout << "Think of a number between 1 and 20\n Press Enter to continue. \n";
+	system("pause");
 
-	while (start == 'S')
+	
+	int minGuess = 0;
+	int maxGuess = 20;
+	guess = rand() % (maxGuess - minGuess + 1) + minGuess;
+
+	while (input != 'E' || 'e')
 	{
-		char input;
-		
-
 		std::cout << "Is your number '>', '<', or '=' to " << guess << "?\n Input 'E' at any time to exit. \n";
 		std::cin >> input;
 
 		switch (input)
 		{
 		case '>':
-			guess+= 1;
+			minGuess = guess;
+			guess = rand() % (maxGuess - minGuess) + (minGuess+1);
 			break;
 		case '<':
-			guess-= 1;
+			maxGuess = guess;
+			guess = rand() % (maxGuess - minGuess) + minGuess;
 			break;
 		case '=':
 			std::cout << "The number you chose was " << guess << ".\n";
 			system("pause");
 			return 0;
 		case 'E':
+			return 0;
+		case 'e':
 			return 0;
 		}
 
