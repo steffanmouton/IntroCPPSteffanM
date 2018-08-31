@@ -100,7 +100,7 @@ int main()
 	d) 14
 	e) Invalid Out of Bounds*/
 
-	//Homework 3 Write a for loop to initialize the following array (int data[10]) with the values 10, 9, 8… (Etc)
+	//Homework 3 Write a for loop to initialize the following array (int data[10]) with the values 10, 9, 8â€¦ (Etc)
 	{
 		//int data[10];
 		//int count = 0;
