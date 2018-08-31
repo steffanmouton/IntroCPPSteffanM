@@ -223,7 +223,7 @@ int main()
 
 	}
 
-	//Homework 8 
+	//Homework 8 HP Damage
 	{
 		int hp[5] = { 100, 100, 100, 100, 100 };
 		int character;
