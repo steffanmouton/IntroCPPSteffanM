@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentNumberGuessingGam
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CharacterArrays", "CharacterArrays\CharacterArrays.vcxproj", "{E29DC1E4-703A-48B0-8933-3BC786942995}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Functions.vcxproj", "{113A6B8C-65AF-4F67-ACBD-4ECB77352395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{E29DC1E4-703A-48B0-8933-3BC786942995}.Release|x64.Build.0 = Release|x64
 		{E29DC1E4-703A-48B0-8933-3BC786942995}.Release|x86.ActiveCfg = Release|Win32
 		{E29DC1E4-703A-48B0-8933-3BC786942995}.Release|x86.Build.0 = Release|Win32
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Debug|x64.ActiveCfg = Debug|x64
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Debug|x64.Build.0 = Debug|x64
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Debug|x86.ActiveCfg = Debug|Win32
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Debug|x86.Build.0 = Debug|Win32
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Release|x64.ActiveCfg = Release|x64
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Release|x64.Build.0 = Release|x64
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Release|x86.ActiveCfg = Release|Win32
+		{113A6B8C-65AF-4F67-ACBD-4ECB77352395}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
