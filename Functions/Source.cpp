@@ -85,19 +85,19 @@ float smallerOfTwo(float a, float b)
 
 int main()
 {
-	
+
 	/*std::cout << multThree(3) << std::endl;
 
 	printValuesToTen();
 
 	printValuesBetween(10, 15);*/
-	
+
 	/*int array1[] = { 1, 2, 3 };
 	int expected = 6;
 
 	if (expected == arraySum(array1, 3))
 	{
-		std::cout << "You win!\n";
+	std::cout << "You win!\n";
 	}*/
 
 	//create a function that will reverse the values in an array
@@ -106,25 +106,29 @@ int main()
 
 	/*int arrayReverse[] = { 1, 2, 3, 4, 5, 6, 7};
 	revArray(arrayReverse, 7);
-	
+
 	for (int i = 0; i < 7; i++)
 	{
-		std::cout << arrayReverse[i] << " ";
+	std::cout << arrayReverse[i] << " ";
 	}
-	
+
 	system("pause");*/
 
 	//   H O M E W O R K  E X E R C I S E S
 
 	//1 What is the output of the problem?  112321
 
-	//2 Write a function that returns the smaller of two floats that are passed to it:	{
-		float floatA;
-		float floatB;
+	//2 Write a function that returns the smaller of two floats that are passed to it:
+	/*float floatA;
+	float floatB;
 
-		std::cout << "Please input two values to find the smaller:\n";
-		std::cin >> floatA >> floatB;
-		std::cout << "The smaller number is: " << smallerOfTwo(floatA, floatB);
+	std::cout << "Please input two values to find the smaller:\n";
+	std::cin >> floatA >> floatB;
+	std::cout << "The smaller number is: " << smallerOfTwo(floatA, floatB);*/
+
+	//3 dfdsgfa
+	{
+
 	}
-	
+
 }
