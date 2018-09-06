@@ -136,6 +136,7 @@ int main()
                 if (xCount == 3)
                 {
                     victory = 'X';
+                    break;
                 }    
                 else
                 {
@@ -158,6 +159,7 @@ int main()
                 if (xCount == 3)
                 {
                     victory = 'X';
+                    break;
                 }    
                 else
                 {
@@ -170,10 +172,12 @@ int main()
             if (play[0][0] == 'X' && play[1][1] == 'X' && play[2][2] == 'X')
             {
                 victory = 'X';
+                break;
             }   
             if (play[2][0] == 'X' && play[1][1] == 'X' && play[0][2] == 'X')
             {
                 victory = 'X';
+                break;
             }    
         }
     
@@ -249,6 +253,7 @@ int main()
                 if (xCount == 3)
                 {
                     victory = 'O';
+                    break;
                 }    
                 else
                 {
@@ -271,6 +276,7 @@ int main()
                 if (oCount == 3)
                 {
                     victory = 'O';
+                    break;
                 }    
                 else
                 {
@@ -283,10 +289,12 @@ int main()
             if (play[0][0] == 'O' && play[1][1] == 'O' && play[2][2] == 'O')
             {
                 victory = 'O';
+                break;
             }   
             if (play[2][0] == 'O' && play[1][1] == 'O' && play[0][2] == 'O')
             {
                 victory = 'O';
+                break;
             }    
     
         }
