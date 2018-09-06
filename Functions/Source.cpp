@@ -151,6 +151,31 @@ int SumArray(arr[], size)
 	return sum;
 }
 
+//HWK 9
+int MinInArray(arr[], size)
+{
+	int min = arr[0];
+	
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] < min)
+		{
+			min = arr[i];
+		}
+	}
+	
+	return min;
+}
+
+//HWK 10
+void MultiplyByIndex(input[], output[], size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		output[i] = input[i] * [i];
+	}
+}
+
 int main()
 {
 
@@ -246,5 +271,21 @@ int main()
 		
 	}
 	
+	//9 Write a function that takes an array of integers and its size, returning the minimum value in the array.
+	{
+		int integer_array[7] = {10, 15, 7, 4, 13, 19, 8};
+		int result = MinInArray(integer_array, 7); // result =4
+		std::cout << result << std::endl;
+	}
 	
+	//10 Write a function that takes an array called input_array, the array size, and a second array of the same size called output_array
+	//Fill each element in the second array to be the value of input_array multiplied by the index in the array.
+	{
+		int integer_array[7] = {10, 15, 7, 4, 13, 19, 8};
+		int output_array[7] = {};
+		MultiplyByIndex(integer_array, output_array, 7); //Output_array should be 0, 15, 14, 12, 52, 95, 48
+		return 0;
+	}
+	
+	//11 Write a function that takes two input arrays of integers, their size, and an output array.
 }
