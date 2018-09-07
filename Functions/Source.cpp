@@ -102,21 +102,21 @@ float smallest(float a, float b, float c)
 }
 
 //HWK 4
-float Half(number)
+float Half(float number)
 {
-	half = number / 2;
+	float half = number / 2;
 	return half;
 }	
 
 //HWK 5
-void CoinToss(flips)
+void CoinToss(int flips)
 {
 	int randValue;
 	
 	for (int i=0; i < flips; i++)
 	{
 		randValue = rand();
-		if (randvalue % 2 == 0)
+		if (randValue % 2 == 0)
 		{
 			std::cout << "heads\n";	
 		}
@@ -129,7 +129,7 @@ void CoinToss(flips)
 }
 
 //HWK 7
-int SumTo(N)
+int SumTo(int N)
 {
 	int sum = 0;
 	for (int i = 0; i <= N; i++)
@@ -140,7 +140,7 @@ int SumTo(N)
 }
 
 //HWK 8
-int SumArray(arr[], size)
+int SumArray(int arr[], int size)
 {
 	int sum = 0;
 	
@@ -152,7 +152,7 @@ int SumArray(arr[], size)
 }
 
 //HWK 9
-int MinInArray(arr[], size)
+int MinInArray(int arr[], int size)
 {
 	int min = arr[0];
 	
@@ -168,11 +168,11 @@ int MinInArray(arr[], size)
 }
 
 //HWK 10
-void MultiplyByIndex(input[], output[], size)
+void MultiplyByIndex(int input[], int output[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
-		output[i] = input[i] * [i];
+		output[i] = input[i] * i;
 	}
 }
 
@@ -207,7 +207,7 @@ int main()
 
 	system("pause");*/
 
-	//   H O M E W O R K  E X E R C I S E S
+	//   H O M E W O R K  E X E R C I S E S (DO 5, 10, 15, 16, 17)
 
 	//1 What is the output of the problem?  112321
 
