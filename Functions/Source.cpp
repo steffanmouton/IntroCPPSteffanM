@@ -125,7 +125,7 @@ void CoinToss(int flips)
 			std::cout << "tails\n";
 		}
 	}	
-	
+	system("pause");
 }
 
 //HWK 7
@@ -174,6 +174,19 @@ void MultiplyByIndex(int input[], int output[], int size)
 	{
 		output[i] = input[i] * i;
 	}
+}
+
+//HWK 15
+int PowerOf(int x, int y)
+{
+	int power = x;
+
+	for (int i = 0; i <= y; i++)
+	{
+		power = power * x;
+	}
+
+	return power;
 }
 
 int main()
@@ -287,5 +300,14 @@ int main()
 		return 0;
 	}
 	
-	//11 Write a function that takes two input arrays of integers, their size, and an output array.
+	//15 Write a function that calculates x^y
+	{
+		int x = 5;
+		int y = 3;
+
+		PowerOf(x, y);
+	}
+
+
+
 }
