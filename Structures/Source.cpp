@@ -12,6 +12,11 @@ struct Item //defining Item structure
 	int quantity;
 };
 
+struct Shop
+{
+
+};
+
 void DisplayStock(Item arr[], int gold) //Displays current stock and 
 										//merchant funds
 {
