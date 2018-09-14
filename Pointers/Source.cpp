@@ -20,8 +20,8 @@ void ReverseArray(int* ptr, int size) //first and last variable, increment point
 //hwk6a
 void RevString(char* array)
 {
-    int* first;
-    int* last;
+    char* first;
+    char* last;
     
     first = array;
     
@@ -35,7 +35,7 @@ void RevString(char* array)
     
     last = count;
     
-    for (int i = 0; i < size / 2; i++)
+    for (int i = 0; i < count / 2; i++)
 	{
 		temp = *first;
 		*first++ = *last;
@@ -47,27 +47,28 @@ void RevString(char* array)
 //hwk6b
 int CountEven(int* array, int array_len)
 {
-    int returnArray[array_len];
-    
-    for(i = 0; i < array_len; i++)
+	int evenCount = 0;
+
+    for(int i = 0; i < array_len; i++)
     {
-        if (array % 2 == 0)
+        if (*array % 2 == 0)
         {
-            returnArray[count] = array;
-            count++;
+            evenCount++;
+			array++;
         }
         else
         {
+			array++;
             continue;   
         }
         
     }    
 
-    return returnArray;
+    return evenCount;
 }   
 
 //hwk6c
-int Maximum(int* maxArray,int* array_size)
+int Maximum(int* maxArray,int array_size)
 {
        
     
@@ -107,9 +108,9 @@ int main()
 	
 	int evenArray[] = { 1, 2, 3, 4, 5, 6 };
 	int array_len = 6;
-	int* ptrArray = &array[0];
+	int* ptrArray = &evenArray[0];
 	
-	CountEven(array, array_len);
+	CountEven(evenArray, array_len);
 	
 	//c - Write a function called Maximum (double* array, int array_size) that returns a pointer to the maximum value. If the array is empty, return nullptr.
 	
