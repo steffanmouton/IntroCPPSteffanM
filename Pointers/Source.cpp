@@ -17,10 +17,10 @@ void ReverseArray(int* ptr, int size) //first and last variable, increment point
 	}
 }
 
-//hwk6a
+//hwk6a - I had trouble making this one work...
 void RevString(char* array)
 {
-    char* first;
+   /* char* first;
     char* last;
     
     first = array;
@@ -40,7 +40,7 @@ void RevString(char* array)
 		temp = *first;
 		*first++ = *last;
 		*last-- = temp;
-	}
+	}*/
     
 }
 
@@ -67,14 +67,46 @@ int CountEven(int* array, int array_len)
     return evenCount;
 }   
 
-//hwk6c
-int Maximum(int* maxArray,int array_size)
+//hwk6c - Couldnt figure out how to return nullptr. Found "DBL_MIN" function online.
+double Maximum(double* maxArray,int array_size)
 {
-       
-    
-    
-    
+	double max = DBL_MIN;
+	for (int i = 0; i < array_size; i++)
+	{
+		if (*maxArray > max)
+		{
+			max = *maxArray;
+			maxArray++;
+		}
+		else
+		{
+			maxArray++;
+			continue;
+		}
+	}
+	
+	return max;
 }
+
+//hwk6d
+bool Contains(char* array, char search_value)
+{
+	while (array == '\0')
+	{
+		if (*array == search_value)
+		{
+			return true;
+			array++;
+		}
+		else
+		{
+			array++;
+		}
+	}
+	return false;
+}
+
+
 int main()
 {
 	// Exercise 1  int nums[6]; use pointer to initialize the array with 1
@@ -108,13 +140,13 @@ int main()
 	
 	int evenArray[] = { 1, 2, 3, 4, 5, 6 };
 	int array_len = 6;
-	int* ptrArray = &evenArray[0];
+	int* pntrArray = &evenArray[0];
 	
-	CountEven(evenArray, array_len);
+	CountEven(pntrArray, array_len);
 	
 	//c - Write a function called Maximum (double* array, int array_size) that returns a pointer to the maximum value. If the array is empty, return nullptr.
 	
-	int maxArray[] = { 1, 2, 6, 3, 4 };
+	double maxArray[] = { 1, 2, 6, 3, 4 };
 	int array_size = 5;
 	
 	Maximum(maxArray, array_size);
