@@ -97,16 +97,18 @@ int main()
 	std::cout << stack.Top() << std::endl;*/
 
 	std::cout << "Reverse Polish Notation Calculator\n" << std::endl;
-	for (int i = 0; i < 20; i++)
-		stack.Push(i);
 
-	while (!stack.isEmpty())
-	{
+	/*for (int i = 0; i < 20; i++)
+
+		stack.Push(i);*/
+
+	/*while (!stack.isEmpty())
+	{ 
 		stack.Pop();
 		stack.PrintInfo();
 		system("pause");
 		system("cls");
-	}
+	}*/
 
 
 		
