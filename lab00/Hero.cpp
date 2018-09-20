@@ -7,5 +7,5 @@ void Hero::TakeDamage(int& power)
 
 void Hero::Fight(Hero & hero)
 {
-	
+	hero.TakeDamage(mPower);
 }
