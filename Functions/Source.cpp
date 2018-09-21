@@ -446,10 +446,6 @@ int main()
 
 			victory = CheckVictory(comp, player);
 		} 
-		
-
 		system("pause");
 	}
-
-
 }
