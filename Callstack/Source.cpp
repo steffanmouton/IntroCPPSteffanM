@@ -21,7 +21,14 @@ class Stack
 
 		bool isEmpty()
 		{
-			return count <= 0;
+			if (count <= 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		
 
@@ -42,12 +49,19 @@ class Stack
 
 		void PrintInfo()
 		{
+			std::cout << std::endl;
+
 			for (int item : values)
+			{
 				std::cout << item << " ";
+			}
+			
+			std::cout << std::endl;
 		}
 
 };
 
+//Takes input char, typecasts to int, checks ascii value to determine operation.
 void InputCheck(int input, Stack &stack)
 {
 	// 0 - 9 on input
@@ -85,7 +99,7 @@ void InputCheck(int input, Stack &stack)
 int main()
 {
 	Stack stack;
-	int input;
+	char input;
 	bool stackIsEmpty = false;
 
 	//TEST CODE FOR STACK
@@ -97,7 +111,9 @@ int main()
 	std::cout << stack.Top() << std::endl;*/
 
 	std::cout << "Reverse Polish Notation Calculator\n" << std::endl;
-	for (int i = 0; i < 20; i++)
+
+	// test for array
+	/*for (int i = 0; i < 20; i++)
 		stack.Push(i);
 
 	while (!stack.isEmpty())
@@ -106,17 +122,27 @@ int main()
 		stack.PrintInfo();
 		system("pause");
 		system("cls");
-	}
+	}*/
 
 
 		
-	do
+	while (stackIsEmpty == false)
 	{
 		std::cout << "Please input a value (0-9) or operation (+ or -):\n";
 		std::cin >> input;
 
 		InputCheck(input, stack);
 
-	} while (stack.isEmpty()== false);
+		stack.PrintInfo();
+
+		stackIsEmpty = stack.isEmpty();
+
+	} 
+
+	//program crashes when stack is empty instead of just exiting. Push Function tries to grab from number before first 
+	//index in array, which is impossible. Not sure how to work around...
+
+
+	return 0;
 
 }
