@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <time.h>
+#include <string>
 
 
 class Hero
@@ -8,18 +9,20 @@ class Hero
 private:
 	int mHealth;
 	int mPower;
+	std::string mName;
 
 public:
 	//Default Constructor
-	Hero()
-	{
-		mHealth = 100;
-		//assigns random power to each fighter between values 10 - 30
-		mPower = rand() % (30 - 10 + 1) + 10;
-	}
+	Hero();	
+	Hero(std::string); 
+	
 
+	std::string Info();
 	void Fight(Hero& hero);
 
-	void TakeDamage(int& power);
+	void TakeDamage(int power);
+
+	int HpCheck();
+
 	
 };
