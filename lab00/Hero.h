@@ -22,4 +22,5 @@ public:
 
 	void TakeDamage(int& power);
 	
+	int HpCheck(Hero hero);
 };
