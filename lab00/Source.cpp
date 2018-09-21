@@ -7,11 +7,11 @@ int main()
 {
 	srand(time(NULL));
 
-	Hero IronMan;
-	Hero CaptAmerica;
+	Hero hero1 = Hero("IronMan");
+	Hero hero2 = Hero("CaptainAmerica");
 
 	Game Arena;
 
-	Arena.Battle(IronMan, CaptAmerica);
+	std::cout << "The winner is: " << Arena.Battle(hero1, hero2).Info();
 
 }
