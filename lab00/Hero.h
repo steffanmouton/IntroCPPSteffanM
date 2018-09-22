@@ -13,9 +13,9 @@ private:
 
 public:
 	//Default Constructor
-	Hero();	
-	Hero(std::string); 
-	
+	Hero();
+	Hero(std::string);
+
 
 	std::string Info();
 	void Fight(Hero& hero);
@@ -24,6 +24,5 @@ public:
 
 	int HpCheck();
 
-	
-	int HpCheck(Hero hero);
+
 };

@@ -5,13 +5,6 @@ void Hero::TakeDamage(int power)
 	mHealth -= power;
 }
 
-<<<<<<< HEAD
-int Hero::HpCheck(Hero hero)
-{
-	return hero.mHealth;
-}
-
-=======
 //returns hero current hp
 int Hero::HpCheck()
 {
@@ -30,20 +23,18 @@ Hero::Hero(std::string Name) :Hero()
 	mName = Name;
 
 }
- 
+
 std::string Hero::Info()
 {
 	std::string info;
-	
+
 	info.append("Name: " + mName);
 	info.append("\nHealth:: " + mHealth);
 	return info;
 }
 
 //Applies TakeDamage function to the hero
->>>>>>> ff55c13e5fbd77e2481b3d76844006f99605d541
 void Hero::Fight(Hero & hero)
 {
 	hero.TakeDamage(mPower);
 }
-
