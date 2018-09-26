@@ -6,5 +6,14 @@ class Game
 private:
 
 public:
-	Hero Battle(Hero& h1, Hero& h2);
+	//Returning both winner and loser via DTO (Data Transfer Object)
+	struct Resolution
+	{
+		Hero winner;
+		Hero loser;
+	};
+
+	Resolution Battle(Hero& h1, Hero& h2);
+
+	
 };

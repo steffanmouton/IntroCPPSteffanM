@@ -22,7 +22,7 @@ public:
 
 	void TakeDamage(int power);
 
-	int HpCheck();
+	bool operator > (const Hero& rhs);
 
-
+	bool operator < (const Hero& rhs);
 };

@@ -23,8 +23,15 @@ int main()
 	Team1.Push(IronMan);
 	Team2.Push(Cap);
 
-	Arena.Battle(Team1.Top(), Team2.Top());
+	Game::Resolution result = Arena.Battle((Hero&)Team1.Top(), (Hero&)Team2.Top());
 
-	std::cout << "The winner is: " << Arena.Battle(hero1, hero2).Info();
+	Hero* wPtr = &(result.winner);
+	Hero* lPtr = &(result.loser);
+
+	Winners.Push(wPtr);
+	Losers.Push(lPtr);
+
+
+	std::cout << "The winner is: " << result.winner.Info();
 
 }

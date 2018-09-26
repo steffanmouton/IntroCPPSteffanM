@@ -2,24 +2,30 @@
 
 //each hero deals damage to the other, whoever is left 
 //with more health is returned as winner
-Hero Game::Battle(Hero & h1, Hero & h2)
+
+//Resolution structure - returns a Resolution that contains both winner and loser
+//Allows for later reference of winner and loser to allow for pushing onto proper stacks
+Game::Resolution Game::Battle(Hero & h1, Hero & h2)
 {
 	Hero winner;
+	Resolution res;
 
-	//Heros hit each other
+	//Heros hit each other using the Fight method
 	h1.Fight(h2);
 	h2.Fight(h1);
 
 
 	//Winner = Higher HP
-	if (h1.HpCheck() > h2.HpCheck())
+	if (h1 > h2)
 	{
-		winner = h1;
+		res.winner = h1;
+		res.loser = h2;
 	}
 	else
 	{
-		winner = h2;
+		res.winner = h2;
+		res.loser = h1;
 	}
 
-	return winner;
+	return res;
 }
