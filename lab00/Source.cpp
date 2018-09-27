@@ -7,37 +7,28 @@ int main()
 {
 	srand(time(NULL));
 	
+	//Initializing all heroes and their pointers
 	Hero* IronMan = new Hero("IronMan");	
 	Hero* Panther = new Hero("BlackPanther");	
 	Hero* Machine = new Hero("WarMachine");	
 	Hero* Spidey = new Hero("SpiderMan");
+	Hero* Vision = new Hero("Vision");
+	Hero* Cap = new Hero("CaptainAmerica");
+	Hero* Hawkeye = new Hero("Hawkeye");
+	Hero* Falcon = new Hero("Falcon");
+	Hero* Bucky = new Hero("WinterSoldier");
+	Hero* AntMan = new Hero("AntMan");
 
-	Hero hero5 = Hero("Vision");
-	Hero* Vision = &hero5;
-
-	Hero hero6 = Hero("CaptainAmerica");
-	Hero* Cap = &hero6;
-
-	Hero hero7 = Hero("Hawkeye");
-	Hero* Hawkeye = &hero7;
-
-	Hero hero8 = Hero("Falcon");
-	Hero* Falcon = &hero8;
-
-	Hero hero9 = Hero("Winter Soldier");
-	Hero* Bucky = &hero9;
-
-	Hero hero10 = Hero("AntMan");
-	Hero* AntMan = &hero10;
-
-
+	//Initializing the battle arena function
 	Game Arena;
 
+	//Initializing the team and result stacks
 	Stack Team1;
 	Stack Team2;
 	Stack Winners;
 	Stack Losers;
 
+	//Pushing the heroes to their Starting Teams
 	Team1.Push(IronMan);
 	Team1.Push(Panther);
 	Team1.Push(Machine);
@@ -53,11 +44,14 @@ int main()
 	//Battle Team 1 vs Team 2, push Winners into Winner Stack and Losers into Loser Stack
 	for (int i = 0; i < 5; i++)
 	{
+		//Fights top of Team 1 stack vs top of Team 2 stack
 		Game::Resolution result = Arena.Battle((Hero&)Team1.Top(), (Hero&)Team2.Top());
 
+		//Set pointers to winner and loser of battle
 		Hero* wPtr = &(result.winner);
 		Hero* lPtr = &(result.loser);
 
+		//Push winnerss 
 		Winners.Push(wPtr);
 		Losers.Push(lPtr);
 

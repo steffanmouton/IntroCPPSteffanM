@@ -3,6 +3,7 @@
 
 class Stack
 {
+	//Stacks that can hold heroes
 private:
 	Hero* mData[20];
 	int mCount;
